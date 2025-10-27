@@ -6,7 +6,7 @@ Our final model successfully identifies 55% of customers who will churn, providi
 ## 🚀 How to Run
 
 1. Download all files from this page
-2. Open `CustomerChurnAnalysisForGithub.ipynb` in Jupyter Notebook  
+2. Open `Customer_Churn_Analysis.ipynb` in Jupyter Notebook  
 3. Run the notebook to see the customer churn analysis
 
 ## The Business Problem: Quantifying the Churn Challenge
