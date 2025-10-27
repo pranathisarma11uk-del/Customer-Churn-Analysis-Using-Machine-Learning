@@ -3,6 +3,12 @@ Customer churn represents a critical threat to profitability and sustainable gro
 This report details the development of a predictive analytics framework that transforms customer retention from a reactive cost center into a proactive growth strategy. By leveraging machine learning, we can now identify at-risk customers months in advance, understand the root causes of churn, and prescribe targeted interventions.
 Our final model successfully identifies 55% of customers who will churn, providing the opportunity to save over 55,000 customers and protect £46+ million in annual revenue. The following sections outline our analytical approach, key findings, and a strategic four-point action plan for immediate implementation.
 
+## 🚀 How to Run
+
+1. Download all files from this page
+2. Open `CustomerChurnAnalysisForGithub.ipynb` in Jupyter Notebook  
+3. Run the notebook to see the customer churn analysis
+
 ## The Business Problem: Quantifying the Churn Challenge
 The telecommunications sector faces intense competition and high customer acquisition costs. Retaining an existing customer is 5 to 7 times less expensive than acquiring a new one, making churn reduction a primary lever for profitability.
 The fundamental flaw in most retention strategies is their reactive nature. By the time a customer contacts the company to cancel, the decision is often final, and retention offers are both desperate and expensive. Our objective was to shift this paradigm by building an early-warning system capable of predicting churn with sufficient lead time to deploy effective, pre-emptive measures.
