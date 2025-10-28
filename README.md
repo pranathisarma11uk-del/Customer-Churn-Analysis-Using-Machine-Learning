@@ -2,7 +2,7 @@
 ![churnimg](https://github.com/user-attachments/assets/1b9cc689-3320-47a2-a417-9f3e5c7c7f69)
 
 ## 🎯 Executive Summary
-Customer churn represents a critical threat to profitability and sustainable growth in the telecommunications industry. For a typical enterprise with one million subscribers, our analysis identifies an annual churn rate of 26.5%, equating to 265,000 customers lost and approximately £222 million in recurring revenue at risk. Traditional reactive retention methods are inefficient and costly because they only engage customers after cancellation requests, when loyalty is already eroded and retention offers become desperate price concessions rather than value-driven solutions.
+Customer churn represents a critical threat to profitability and sustainable growth in the telecommunications industry. For a typical enterprise with one million subscribers, this analysis identifies an annual churn rate of 26.5%, equating to 265,000 customers lost and approximately £222 million in recurring revenue at risk. Traditional reactive retention methods are inefficient and costly because they only engage customers after cancellation requests, when loyalty is already eroded and retention offers become desperate price concessions rather than value-driven solutions.
 
 This report details the development of a predictive analytics framework that transforms customer retention from a reactive cost centre into a proactive growth strategy. By leveraging machine learning, we can now identify ‘at-risk customers’ months in advance, understand the root causes of churn, and prescribe targeted interventions.
 
