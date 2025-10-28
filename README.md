@@ -44,7 +44,7 @@ The analysis was conducted on the publicly available Telco Customer Churn datase
 ### Exploratory Data Analysis
 <img width="374" height="356" alt="image" src="https://github.com/user-attachments/assets/bc01952a-362e-4bcf-8d07-7725b3998c7b" />
 
-Our analysis reveals that 26.5% of customers churn annually, representing a significant revenue risk for the business. This visualization provides immediate context for the scale of the churn challenge:
+The analysis reveals that 26.5% of customers churn annually, representing a significant revenue risk for the business. This chart provides immediate context for the scale of the churn challenge:
 
 - 73.5% Customer Retention: The majority of customers continue their service, representing the stable foundation of the business
 - 26.5% Customer Attrition: Nearly 1 in 4 customers leave annually, highlighting the urgent need for proactive retention measures
@@ -53,7 +53,7 @@ Business Context: For a company with 1 million subscribers, this 26.5% churn rat
 
 ## 🤖 The Predictive Model: An Early-Warning System
 
-We evaluated three distinct machine learning algorithms to identify the optimal solution for this business problem. The primary evaluation metric was Recall—the model's ability to correctly identify customers who will actually churn. In this context, missing a customer who leaves (a false negative) is far more costly than incorrectly flagging a loyal customer (a false positive).
+Three distinct machine learning algorithms were evaluated to identify the optimal solution for this business problem. The primary evaluation metric was Recall—the model's ability to correctly identify customers who will actually churn. In this context, missing a customer who leaves (a false negative) is far more costly than incorrectly flagging a loyal customer (a false positive).
 
 | Model | Accuracy | Precision | **Recall** | F1-Score | ROC AUC |
 |-------|----------|-----------|------------|----------|---------|
@@ -63,7 +63,7 @@ We evaluated three distinct machine learning algorithms to identify the optimal 
 
 Logistic Regression successfully identified clear linear patterns, confirming that contract type and monthly charges were strong churn indicators. It established that month-to-month customers were 3x more likely to churn and revealed a £13+ price gap between churned and retained customers. However, despite these valuable insights, it missed 44% of customers who actually churned—representing unacceptable revenue risk due to its inability to capture complex behavioral patterns.
 
-We then advanced to Random Forest, which uncovered more sophisticated relationships by analyzing hundreds of feature combinations. It validated that tenure duration and total customer value were critical factors, while also detecting subtle service usage patterns that influenced churn decisions. The model's ensemble approach provided robust pattern recognition, but it became overly conservative in practice—actually reducing recall and missing more churners than our baseline, despite its deeper analytical capabilities.
+Secondly Random Forest was applied, which uncovered more sophisticated relationships by analyzing hundreds of feature combinations. It validated that tenure duration and total customer value were critical factors, while also detecting subtle service usage patterns that influenced churn decisions. The model's ensemble approach provided robust pattern recognition, but it became overly conservative in practice—actually reducing recall and missing more churners than our baseline model, despite its deeper analytical capabilities.
 
 XGBoost was selected as the final model based on its superior ability to handle complex, non-linear relationships and class imbalance inherently. It provided the best balance of high recall (55%) and actionable insights through feature importance analysis. While other models like Light GBM could have been tested, XGBoost's proven track record and performance met our core business objectives of maximizing churn detection, providing interpretable feature importance for strategic decisions, and delivering production-ready performance without necessitating further experimentation.
 
@@ -72,7 +72,7 @@ XGBoost was selected as the final model based on its superior ability to handle 
 This chart evaluates our models using recall, a metric that answers the question: "Of all customers who actually churned, how many did the model correctly flag?" A higher recall means fewer churning customers are missed. Based on this, XGBoost is the top performer, correctly identifying 76.5% of all true churn cases.
 
 ## What do these metrics mean for the business?
-- Recall (76.5%): For every 100 customers who will churn, our model identifies 76 in advance
+- Recall (76.5%): For every 100 customers who will churn, the model identifies 76 in advance
 - Precision (53.1%): When the model flags a customer as high-risk, it is correct 53% of the time
 - Overall Accuracy (75.8%): The model correctly predicts the churn outcome for 76% of all customers
 - F1-Score (62.7%): Balances precision and recall, indicating strong overall performance in identifying true churners while managing false positives
@@ -80,15 +80,18 @@ This chart evaluates our models using recall, a metric that answers the question
 
 ## 📊 Core Insights: The Primary Drivers of Customer Churn
 
-Our exploratory analysis and modeling revealed four dominant factors influencing customer churn.
+The exploratory analysis and modeling revealed four dominant factors influencing customer churn.
 
-1. Contract Type is the Strongest Predictor
+1. Contract Type is the Strongest Predictor:
 Customers with month-to-month contracts are three times more likely to churn than those on one or two-year agreements. The data shows a 42.7% churn rate for monthly contracts compared to just 11.3% for one-year contracts. This indicates a "commitment gap" where flexible terms facilitate easy departure, while longer contracts foster stability and loyalty.
-2. The Premium Service Paradox
+
+2. The Premium Service Paradox:
 Despite its premium positioning, Fiber Optic service is associated with a 41.9% churn rate, significantly higher than the 19% rate for DSL customers. This suggests potential issues with service reliability, competitive pricing, or a mismatch between customer expectations and the delivered experience.
-3. Price Sensitivity and Value Perception
+
+3. Price Sensitivity and Value Perception:
 A clear correlation exists between monthly charges and churn probability. On average, churned customers paid £74.44 per month, compared to £61.27 for retained customers. For every £10 increase in monthly charges, the risk of churn rises by approximately 8%. This indicates that customers at higher price points are more likely to question the value they receive.
-4. The Critical First-Year Window
+
+4. The Critical First-Year Window:
 Customer tenure is a powerful indicator of loyalty. Customers in their first year are 63% more likely to churn than those with tenures exceeding three years. Customers with tenure under 1 year show 100% churn rate in our high-risk segment, dropping to 12% after three years. This highlights the onboarding period and first-year experience as critical to long-term retention.
 
 ## 👥 Strategic Customer Segmentation
@@ -96,12 +99,12 @@ Customer tenure is a powerful indicator of loyalty. Customers in their first yea
 
 Customer segmentation was performed using the Elbow Method, which indicated three as the optimal number of clusters. The customers were accordingly grouped into three distinct segment to enable tailored strategies.
 
-- Segment A: Budget-Conscious Stable Customers (45.9% of base). Low monthly charges ($44), moderate tenure (30 months), 0% churn rate.
-- Segment B: Loyal High-Value Customers (30.6% of base). High monthly charges ($90), long tenure (58 months), 10% churn rate.
-- Segment C: At-Risk New & Dissatisfied (23.5% of base). Moderate monthly charges ($74), short tenure (13 months), 100% churn rate.
+- Segment A: Budget-Conscious Stable Customers (45.9% of base). Low monthly charges (£44), moderate tenure (30 months), 0% churn rate.
+- Segment B: Loyal High-Value Customers (30.6% of base). High monthly charges (£90), long tenure (58 months), 10% churn rate.
+- Segment C: At-Risk New & Dissatisfied (23.5% of base). Moderate monthly charges (£74), short tenure (13 months), 100% churn rate.
 
 ## 📈 Recommendations and Implementation Plan
-Based on our data-driven insights, we propose four strategic initiatives for immediate execution:
+Based on the data-driven insights, four strategic initiatives are proposed for immediate execution:
 
 1. Launch a Targeted Contract Conversion Campaign
 Implement a "Commit & Save" program, offering a 10-15% discount to month-to-month customers who switch to one or two-year contracts. Focus this campaign on new customers within their first three months and existing customers with high monthly charges. The expected outcome is a 35% reduction in churn from this high-risk segment.
@@ -121,7 +124,7 @@ For a company with one million customers:
 
 ## ⚠️ Limitations and Future Considerations
 
-While this analysis establishes a strong predictive framework, several enhancements could further strengthen our retention capabilities:
+While this analysis establishes a strong predictive framework, several enhancements could further strengthen the retention capabilities:
 
 -	Data Scope: The model is based on quantitative data. Incorporating qualitative feedback from support calls and surveys would deepen the understanding of churn drivers.
 -	Temporal Analysis: The current dataset is a static snapshot. Future iterations could incorporate time-series data to track behavioral trends and identify at-risk customers even earlier.
