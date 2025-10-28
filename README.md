@@ -35,7 +35,7 @@ The analysis was conducted on the publicly available Telco Customer Churn datase
 1. Data Cleaning & Integrity using SQL
 
 - Handling Missing Values: 11 customer records (0.15% of the dataset) with missing 'Total Charges' were identified and removed. This decision preserved data integrity by avoiding biased imputation and had a negligible impact on the overall analysis.
-- Values in various columns were standardized for consistency (e.g., yes, no, no internet service were standardised to yes/no).
+- Values in various columns were standardized for consistency (e.g., yes/no/no internet service were standardised to yes/no).
 
 2. Feature Engineering & Preprocessing in Python
 - Categorical variables, such as 'Contract Type' and 'Payment Method', were converted into numerical formats using one-hot encoding. The target variable, 'Churn', was encoded by mapping 'Yes' to 1 and 'No' to 0.
