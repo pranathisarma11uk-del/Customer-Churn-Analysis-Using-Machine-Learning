@@ -30,7 +30,7 @@ The fundamental flaw in most retention strategies is their reactive nature. By t
 ## 🔍 Analysis
 ### Data Prepration
 
-The analysis was conducted on the publicly available Telco Customer Churn dataset, which initially comprised 7,043 customer records with demographic, service, and billing information. A two-stage data preparation pipeline was implemented to ensure data quality and model readiness.
+The analysis was conducted on the publicly available Telco Customer Churn dataset, which initially comprised 7,043 customer records with demographics, service, and billing information. A two-stage data preparation pipeline was implemented to ensure data quality and model readiness.
 
 1. Data Cleaning & Integrity using SQL
 
