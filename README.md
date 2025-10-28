@@ -20,6 +20,7 @@ The following sections outline our analytical approach, key findings, and a stra
 - `Customer_Churn_Analysis.ipynb` - Main analysis notebook
 - `TelcoCustomerChurnDatasetCleaned.csv` - Dataset
 - `requirements.txt` - List of required Python packages
+- `telco_customer_churn.sql`  - SQL queries for data cleaning
 
 ## The Business Problem: Quantifying the Churn Challenge
 The telecommunications sector faces intense competition and high customer acquisition costs. Retaining an existing customer is 5 to 7 times less expensive than acquiring a new one, making churn reduction a primary lever for profitability.
